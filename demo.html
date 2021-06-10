@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xAlert | Demo</title>
+    <style></style>
+    <script src="xAlert.js"></script>
+  </head>
+  <body>
+    <script>
+      
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      let xAlerts = new xAlert();
+
+      setInterval(() => {
+        let style = ["prime", "second", "dark"];
+        let kstyle = ["error", "warning", "hello"];
+        let emot = [":(", ";)", ":)"];
+        let k = getRandom(0, 3);
+        xAlerts.send(
+          kstyle[k] + " my friend " + emot[k],
+          style[k],
+          getRandom(500, 4000)
+        );
+      }, 500);
+
+      setTimeout(() => {
+        xAlerts.send("hello there", "prime", 2000);
+      }, 4000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "second", 1000);
+      }, 1000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "dark", 500);
+      }, 2000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "prime", 4000);
+      }, 6000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "dark", 2000);
+      }, 8000);
+
+      setTimeout(() => {
+        xAlerts.send("hello there", "prime", 4000);
+      }, 2000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "dark", 2000);
+      }, 1000);
+
+      setTimeout(() => {
+        xAlerts.send("hello there", "prime", 4000);
+      }, 2000);
+      setTimeout(() => {
+        xAlerts.send("hello there", "dark", 2000);
+      }, 1000);
+
+      xAlerts.send("hello there", "second", 2000);
+    </script>
+  </body>
+</html>
