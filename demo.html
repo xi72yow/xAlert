@@ -4,12 +4,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>xAlert | Demo</title>
+    <link rel="stylesheet" href="style.min.css" />
     <style></style>
     <script src="xAlert.js"></script>
   </head>
   <body>
+    <span
+      style="position: absolute; top: 10%; left: 30%"
+      data-xTip-l="zorro kappa"
+      >tooltip left</span
+    >
+    <span
+      style="position: absolute; top: 30%; left: 30%"
+      data-xTip-r="url here!"
+      >tooltip right</span
+    >
+
+    <span
+      style="position: absolute; top: 50%; left: 30%"
+      data-xTip-b="zorro kappa"
+      >tooltip bottom</span
+    >
+    <span
+      style="position: absolute; top: 70%; left: 30%"
+      data-xTip-t="url here!"
+      >tooltip top</span
+    >
+
     <script>
-      
       function getRandom(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
