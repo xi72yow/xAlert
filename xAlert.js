@@ -23,9 +23,19 @@ class xAlert {
         this.pos = pos;
     }
     send(msg, style, duration) {
+
+        if (typeof style === 'undefined') {
+            style = "dark";
+        }
+
+        if (typeof duration === 'undefined') {
+            duration = 2000;
+        }
+
         let slotNum = this.slots.findIndex((s) => {
             return s.isSet == false;
         });
+
         if (slotNum > -1) {
             msg = msg.substring(0, Math.min(msg.length, 20));
             let el = document.createElement("div");
@@ -33,6 +43,7 @@ class xAlert {
             el.classList.add("alert-box");
             el.classList.add("slide-in");
             let pix = slotNum * 60 + 15;
+            
             if (this.pos == "top") {
                 el.style.top = pix + "px";
 
