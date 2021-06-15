@@ -7,7 +7,9 @@
 }
 
 /*alert style*/
-
+body {
+  overflow: hidden;
+}
 .alert-box {
   position: absolute;
   box-sizing: border-box;
@@ -37,7 +39,7 @@
 }
 .dark {
   background-color: #010101d5;
-  color: #ffbb00;;
+  color: #ffbb00;
   border-bottom-color: #af0069;
 }
 .slide-in {
@@ -63,6 +65,37 @@
   100% {
     left: 7%;
   }
+}
+
+@keyframes hinge {
+  0% {
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    overflow: hidden;
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+.hinge {
+  animation-duration: 0.5s;
+  animation-name: hinge;
+  transform-origin: top left;
 }
 
 /*tool tipps*/
@@ -99,7 +132,6 @@
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s, transform 0.2s;
-
 }
 
 [data-xTip-t]:hover::after {

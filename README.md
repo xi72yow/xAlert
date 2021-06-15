@@ -19,6 +19,10 @@ or
 
 ## Usage
 
+### Hints
+
+You can only Use 20 charakters in msg. 
+
 ### Alerts
 
 ```javascript
@@ -34,6 +38,9 @@ xAlerts.send("error msg", "prime", duration);
 
 //send warning
 xAlerts.send("warning msg", "second", duration);
+
+//set slots on rezize
+window.addEventListener("resize", xAlerts.setSlots);
 ```
 
 ### Tooltips

@@ -83,6 +83,8 @@
       }, 1000);
 
       xAlerts.send("hello there", "second", 2000);
+
+      window.addEventListener("resize", xAlerts.setSlots);
     </script>
   </body>
 </html>
