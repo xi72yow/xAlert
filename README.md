@@ -5,6 +5,7 @@
 JS script for Alerts
 
 ![](xAlertDemo.gif)
+
 [Here](https://xi72yow.github.io/xAlert/demo.html) you can see the result.
 
 ## Setup
